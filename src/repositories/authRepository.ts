@@ -1,5 +1,5 @@
 import prisma from '../database/database';
-import { ICreateNewUserData } from '../types/authTypes';
+import { ICreateNewSession, ICreateNewUserData } from '../types/authTypes';
 
 
 
@@ -15,4 +15,11 @@ export async function insertNewUser(newUserData: ICreateNewUserData) {
     await prisma.users.create({
         data: newUserData
     }); 
+}
+
+export async function insertNewSession(newSessionData: ICreateNewSession) {
+
+    await prisma.sessions.create({
+        data: newSessionData
+    });
 }
