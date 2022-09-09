@@ -1,5 +1,5 @@
 import prisma from '../database/database';
-import { CreateNewUserData } from '../types/authTypes';
+import { ICreateNewUserData } from '../types/authTypes';
 
 
 
@@ -10,7 +10,7 @@ export async function findUserByEmail (email: string) {
     });
 }
 
-export async function insertNewUser(newUserData: CreateNewUserData) {
+export async function insertNewUser(newUserData: ICreateNewUserData) {
     
     await prisma.users.create({
         data: newUserData

@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import { CreateNewUserData } from '../types/authTypes';
+import { ICreateNewUserData } from '../types/authTypes';
 import * as authRepository from '../repositories/authRepository';
 import * as utilsFunctions from '../utils/functions';
 
@@ -7,7 +7,7 @@ import * as utilsFunctions from '../utils/functions';
 dotenv.config();
 
 
-export async function signUpNewUser (newUserData: CreateNewUserData) {
+export async function signUpNewUser (newUserData: ICreateNewUserData) {
     
     await checkDuplicateEmail(newUserData.email);
 
