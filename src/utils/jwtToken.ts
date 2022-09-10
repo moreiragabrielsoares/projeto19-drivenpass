@@ -15,3 +15,13 @@ export function generateToken (userId: number) {
 
     return token;
 }
+
+
+export async function validateToken (token: string) {
+
+    const jwtKey = process.env.JWT_KEY!;
+
+    const jwtData = jwt.verify(token, jwtKey);
+    
+    return jwtData;
+}

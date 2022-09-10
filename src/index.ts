@@ -3,6 +3,7 @@ import "express-async-errors";
 import cors from 'cors';
 import dotenv from 'dotenv';
 import authRouter from './routes/authRouter';
+import mainRouter from './routes/mainRouter';
 import errorHandler from './middlewares/errorHandler';
 
 
@@ -14,6 +15,7 @@ app.use(cors());
 app.use(json());
 
 app.use(authRouter);
+app.use(mainRouter);
 
 
 
