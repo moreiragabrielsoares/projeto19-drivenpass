@@ -23,3 +23,10 @@ export async function insertNewSession(newSessionData: ICreateNewSession) {
         data: newSessionData
     });
 }
+
+export async function findToken(token: string) {
+
+    return prisma.sessions.findFirst({
+        where: { token }
+    });
+}
