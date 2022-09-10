@@ -4,6 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import authRouter from './routes/authRouter';
 import mainRouter from './routes/mainRouter';
+import loginCredentialsRouter from './routes/loginCredentialsRouter';
 import errorHandler from './middlewares/errorHandler';
 
 
@@ -16,6 +17,7 @@ app.use(json());
 
 app.use(authRouter);
 app.use(mainRouter);
+app.use(loginCredentialsRouter);
 
 
 
