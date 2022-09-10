@@ -21,6 +21,15 @@ export async function findLoginCredentialById (loginCredentialId: number) {
     return loginCredential;
 }
 
+export async function deleteLoginCredentialById (loginCredentialId: number) {
+
+    await prisma.loginCredentials.delete({
+        where: {id: loginCredentialId}
+    });
+
+    return;
+}
+
 export async function findUserLoginCredentialTitle (userId: number, title: string) {
 
     const userLoginCredentialTitle = await prisma.loginCredentials.findFirst({

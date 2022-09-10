@@ -34,3 +34,14 @@ export async function findLoginCredentialById (req: Request, res: Response) {
 
     res.status(200).send(loginCredential);
 }
+
+
+export async function deleteLoginCredentialById (req: Request, res: Response) {
+
+    const userId = res.locals.session.userId;
+    const loginCredentialId = parseInt(req.params.id);
+
+    await loginCredentialsService.deleteLoginCredentialById(loginCredentialId, userId);
+
+    res.status(200).send('Ok');
+}

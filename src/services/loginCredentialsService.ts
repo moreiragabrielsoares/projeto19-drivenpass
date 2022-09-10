@@ -36,6 +36,24 @@ export async function findLoginCredentialById (loginCredentialId: number, userId
 }
 
 
+export async function deleteLoginCredentialById (loginCredentialId: number, userId: number) {
+
+    const loginCredential = await loginCredentialsRepository.findLoginCredentialById(loginCredentialId);
+
+    if (!loginCredential) {
+        throw {type: 'NotFound', message: 'NotFound id'};
+    }
+    
+    if (loginCredential?.userId !== userId) {
+        throw {type: 'Unauthorized', message: 'You do not have permission to access this id'};
+    }
+
+    await loginCredentialsRepository.deleteLoginCredentialById(loginCredentialId);
+
+    return;
+}
+
+
 async function checkDuplicateTitle (userId: number, title: string) {
 
     const userLoginCredentialTitle = await loginCredentialsRepository.findUserLoginCredentialTitle(userId, title);
