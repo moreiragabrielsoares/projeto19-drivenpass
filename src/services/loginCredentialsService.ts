@@ -17,6 +17,24 @@ export async function findUserLoginCredentialsByUserId (userId: number) {
 }
 
 
+export async function findLoginCredentialById (loginCredentialId: number, userId: number) {
+
+    const loginCredential = await loginCredentialsRepository.findLoginCredentialById(loginCredentialId);
+
+    if (!loginCredential) {
+        throw {type: 'NotFound', message: 'NotFound id'};
+    }
+    
+    if (loginCredential?.userId !== userId) {
+        throw {type: 'Unauthorized', message: 'You do not have permission to access this id'};
+    }
+
+    const decryptedPassword = utilsFunctions.decryptDataWithCryptr(loginCredential.userPassword);
+    loginCredential.userPassword = decryptedPassword;
+
+    return loginCredential;
+}
+
 
 async function checkDuplicateTitle (userId: number, title: string) {
 

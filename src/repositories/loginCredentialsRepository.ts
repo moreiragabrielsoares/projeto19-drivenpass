@@ -1,4 +1,3 @@
-import { loginCredentials } from '@prisma/client';
 import prisma from '../database/database';
 import { ICreateLoginCredential } from '../types/loginCredentialsTypes';
 
@@ -11,6 +10,15 @@ export async function findUserLoginCredentialsByUserId (userId: number) {
     });
 
     return userLoginCredentials;
+}
+
+export async function findLoginCredentialById (loginCredentialId: number) {
+
+    const loginCredential = await prisma.loginCredentials.findUnique({
+        where: {id: loginCredentialId}
+    });
+
+    return loginCredential;
 }
 
 export async function findUserLoginCredentialTitle (userId: number, title: string) {
@@ -31,5 +39,4 @@ export async function insertNewLoginCredential (newLoginCredentialData: ICreateL
     await prisma.loginCredentials.create({
         data: newLoginCredentialData
     });
-
 }

@@ -14,6 +14,12 @@ loginCredentialsRouter.get(
     loginCredentialsController.findUserLoginCredentialsByUserId
 );
 
+loginCredentialsRouter.get(
+    '/login-credentials/:id', 
+    validateUser, 
+    loginCredentialsController.findLoginCredentialById
+);
+
 loginCredentialsRouter.post(
     '/login-credentials',
     validateSchema(createLoginCredentialSchema), 
