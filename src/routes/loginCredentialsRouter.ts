@@ -20,6 +20,12 @@ loginCredentialsRouter.get(
     loginCredentialsController.findLoginCredentialById
 );
 
+loginCredentialsRouter.delete(
+    '/login-credentials/:id', 
+    validateUser, 
+    loginCredentialsController.deleteLoginCredentialById
+);
+
 loginCredentialsRouter.post(
     '/login-credentials',
     validateSchema(createLoginCredentialSchema), 
