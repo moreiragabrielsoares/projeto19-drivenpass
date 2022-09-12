@@ -7,6 +7,7 @@ import mainRouter from './routes/mainRouter';
 import loginCredentialsRouter from './routes/loginCredentialsRouter';
 import safeNotesRouter from './routes/safeNotesRouter';
 import bankCardsRouter from './routes/bankCardsRouter';
+import wifiCredentialsRouter from './routes/wifiCredentialsRouter';
 import errorHandler from './middlewares/errorHandler';
 
 
@@ -22,7 +23,7 @@ app.use(mainRouter);
 app.use(loginCredentialsRouter);
 app.use(safeNotesRouter);
 app.use(bankCardsRouter);
-
+app.use(wifiCredentialsRouter);
 
 app.use(errorHandler);
 
