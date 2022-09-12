@@ -1,0 +1,433 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "drivenpass",
+    "dateExported": "2022-09-12T18:05:40.133Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "042beefa-e727-4c7d-99b0-5dd14fc7a0ca",
+            "name": "auth",
+            "containerId": "",
+            "created": "2022-09-12T14:44:14.972Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "f88e387e-b704-43a0-bde3-b5571708a13a",
+            "name": "login-credentials",
+            "containerId": "",
+            "created": "2022-09-12T14:50:00.587Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "298e9f54-12d4-4808-a452-7e20a5d405a5",
+            "name": "safe-notes",
+            "containerId": "",
+            "created": "2022-09-12T14:58:13.359Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "0bfeeb40-fae5-464a-a5b7-1f05e3175474",
+            "name": "main",
+            "containerId": "",
+            "created": "2022-09-12T15:08:39.980Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "99a60a16-9eaf-46a0-a992-16ab2b7621f7",
+            "name": "bank-cards",
+            "containerId": "",
+            "created": "2022-09-12T15:00:30.377Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "df65579d-6d85-444a-9134-1722d04297ee",
+            "name": "wifi-credentials",
+            "containerId": "",
+            "created": "2022-09-12T15:05:19.204Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "39924865-ccf9-425d-b9ba-d12ab1d83f97",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "042beefa-e727-4c7d-99b0-5dd14fc7a0ca",
+            "name": "signup",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/signup",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2022-09-12T14:44:25.119Z",
+            "modified": "2022-09-12T17:54:55.268Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"teste2@email.com\",\n  \"password\": \"#a12345678\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "eb824c64-55de-42b6-a298-9394ef317c6c",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "042beefa-e727-4c7d-99b0-5dd14fc7a0ca",
+            "name": "login",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2022-09-12T14:47:03.660Z",
+            "modified": "2022-09-12T17:57:12.924Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"teste@email.com\",\n  \"password\": \"#a12345678\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6d964d48-1d92-4ffc-995f-a77d8d4cff80",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "f88e387e-b704-43a0-bde3-b5571708a13a",
+            "name": "createNew",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/login-credentials",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2022-09-12T14:50:47.812Z",
+            "modified": "2022-09-12T18:00:27.973Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"title2\",\n  \"url\": \"https://www.driven.com/\",\n  \"userName\": \"username\",\n  \"userPassword\": \"userpassword\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8a85f13a-2f62-425b-aacc-72ee57bfe115",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "298e9f54-12d4-4808-a452-7e20a5d405a5",
+            "name": "createNew",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/safe-notes",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2022-09-12T14:58:13.359Z",
+            "modified": "2022-09-12T18:01:49.760Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"title2\",\n  \"note\": \"note\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f7295a56-95dd-4a1b-a0f6-19982ceea9ee",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "99a60a16-9eaf-46a0-a992-16ab2b7621f7",
+            "name": "createNew",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/bank-cards",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2022-09-12T15:00:30.377Z",
+            "modified": "2022-09-12T18:02:49.153Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"number\": \"9999-9999-9999-9999\",\n  \"title\": \"title2\",\n  \"name\": \"NAME LAST NAME\",\n  \"password\": \"9999\",\n  \"securityCode\": \"999\",\n  \"expirationDate\": \"11/27\",\n  \"isVirtual\": false,\n  \"type\": \"credit\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ef46d284-752c-44f4-89cd-ca3cc562047d",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "df65579d-6d85-444a-9134-1722d04297ee",
+            "name": "createNew",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/wifi-credentials",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2022-09-12T15:05:19.204Z",
+            "modified": "2022-09-12T18:03:13.851Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"title\",\n  \"name\": \"name\",\n  \"password\": \"password\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a746e7bb-7d7f-4e64-9bf1-4667a5be4bfd",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "f88e387e-b704-43a0-bde3-b5571708a13a",
+            "name": "getAll",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/login-credentials",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2022-09-12T14:54:55.174Z",
+            "modified": "2022-09-12T17:57:36.726Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e92ca6d1-39b4-47e9-a574-171105c82dad",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "298e9f54-12d4-4808-a452-7e20a5d405a5",
+            "name": "getAll",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/safe-notes",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2022-09-12T14:58:13.360Z",
+            "modified": "2022-09-12T17:58:21.220Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ac57aad3-11a8-4e00-8e40-e2bcb3a70505",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "99a60a16-9eaf-46a0-a992-16ab2b7621f7",
+            "name": "getAll",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/bank-cards",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2022-09-12T15:00:30.378Z",
+            "modified": "2022-09-12T18:02:52.179Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "dedf1e91-8f83-4382-bda9-5cc6c1e8878d",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "df65579d-6d85-444a-9134-1722d04297ee",
+            "name": "getAll",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/wifi-credentials",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2022-09-12T15:05:19.205Z",
+            "modified": "2022-09-12T18:03:23.252Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "2cb5877b-4905-46cd-9119-63facd71b73b",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "f88e387e-b704-43a0-bde3-b5571708a13a",
+            "name": "getById",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/login-credentials/3",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2022-09-12T14:55:43.103Z",
+            "modified": "2022-09-12T18:00:47.990Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3248389b-4bba-40e4-9f56-0451ea8db663",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "298e9f54-12d4-4808-a452-7e20a5d405a5",
+            "name": "getById",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/safe-notes/2",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2022-09-12T14:58:13.361Z",
+            "modified": "2022-09-12T18:02:09.310Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "dd25c7ca-a329-452e-bba0-33213d5322c2",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "99a60a16-9eaf-46a0-a992-16ab2b7621f7",
+            "name": "getById",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/bank-cards/2",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2022-09-12T15:00:30.379Z",
+            "modified": "2022-09-12T18:03:00.257Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "60a91957-0be5-45a7-bca9-972e2493a98d",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "df65579d-6d85-444a-9134-1722d04297ee",
+            "name": "getById",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/wifi-credentials/2",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2022-09-12T15:05:19.206Z",
+            "modified": "2022-09-12T18:03:35.195Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3474eb0a-5baf-43aa-a3d0-3e119e51d826",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "0bfeeb40-fae5-464a-a5b7-1f05e3175474",
+            "name": "getData",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/main",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2022-09-12T15:08:53.570Z",
+            "modified": "2022-09-12T18:02:29.902Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "39a808f2-ea26-40bd-9a24-ba46233444fd",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "f88e387e-b704-43a0-bde3-b5571708a13a",
+            "name": "deleteById",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/login-credentials/3",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2022-09-12T14:57:30.870Z",
+            "modified": "2022-09-12T18:01:00.519Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b0815f4e-0da7-4faa-ac66-eea7a226855e",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "298e9f54-12d4-4808-a452-7e20a5d405a5",
+            "name": "deleteById",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/safe-notes/2",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2022-09-12T14:58:13.362Z",
+            "modified": "2022-09-12T18:02:20.883Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a0c4c24c-e5c5-4e5a-9273-050d9f939283",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "99a60a16-9eaf-46a0-a992-16ab2b7621f7",
+            "name": "deleteById",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/bank-cards/2",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2022-09-12T15:00:30.380Z",
+            "modified": "2022-09-12T18:03:06.152Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9da407eb-7b9c-41ff-8d15-14668d1e9a61",
+            "colId": "52014b75-50e3-4424-b85c-0088e4857432",
+            "containerId": "df65579d-6d85-444a-9134-1722d04297ee",
+            "name": "deleteById",
+            "url": "https://projeto-drivenpass-back.herokuapp.com/wifi-credentials/2",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2022-09-12T15:05:19.207Z",
+            "modified": "2022-09-12T18:03:39.940Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2MzAwNTQzMiwiZXhwIjoxNjYzMDkxODMyfQ.5ZFcyvgqB5UkL6eVfgxejr9HqMLpolH5ExUGJAnlKjA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
