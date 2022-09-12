@@ -6,6 +6,7 @@ import authRouter from './routes/authRouter';
 import mainRouter from './routes/mainRouter';
 import loginCredentialsRouter from './routes/loginCredentialsRouter';
 import safeNotesRouter from './routes/safeNotesRouter';
+import bankCardsRouter from './routes/bankCardsRouter';
 import errorHandler from './middlewares/errorHandler';
 
 
@@ -20,7 +21,7 @@ app.use(authRouter);
 app.use(mainRouter);
 app.use(loginCredentialsRouter);
 app.use(safeNotesRouter);
-
+app.use(bankCardsRouter);
 
 
 app.use(errorHandler);

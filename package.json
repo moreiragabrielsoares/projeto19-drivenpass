@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@joi/date": "^2.1.0",
     "@prisma/client": "^4.3.1",
     "@types/bcrypt": "^5.0.0",
     "@types/cors": "^2.8.12",
